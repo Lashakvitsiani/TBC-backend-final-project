@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Adding transparency */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.album-image {
+    filter: invert(0);
+    margin-right: 50px;
+}
+.d-flex {
+    display: flex;
+}
+
+.album-cover-art img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ml-4 {
+    margin-left: 1.5rem; /* You can adjust the margin as needed */
+}
+
+#tracks li {
+    margin-bottom: 10px; /* Adjust the value to your preference */
+}
+
+
+
+
+.do-not-click {
+    margin-top: 200x;
+    float: right;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    *{
+        font-family: Kaisei Decol;
+        margin: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navigation ul {
+        margin: 0;
+        display: block;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .carousel-item img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* a */
+    .navigation a {
+        text-decoration: none;
+        color: #636060;
+        font-size: 13px;
+    }
+    .flexbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .text1{
+        font-size: 36px;
+        margin-top: -40px;
+        width: max-content;
+        padding: 0 10px;
+    }
+    .text1::before, .text1::after {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        background-color: black;
+        width: 59px;
+        position: relative;
+        bottom: 8px;
+    }
+    .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size:cover;
+        height: 850px;
+    }
+    /* About us  */
+    .centered3 {
+        font-size: 40px;
+    }
+
+    .places {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .text3::before, .text3::after {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    background-color: black;
+    width: 100px;
+    position: relative;
+    bottom: 4px;
+    }
+    .circle {
+     padding-bottom: 20px;
+    }
+    .text4 {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .photo {
+    background-position: center;
+    }
+    .centered4 {
+        align-items: center;
+        color: azure;
+        font-size: 15px;
+        opacity: 100%;
+        transition: 5s;
+        padding-right: 55px;
+    }
+    /* books */
+
+    .text_books_centered {
+        font-size: 30px;
+    }
+    .shop_text::before, .shop_text::after {
+        width: 100px;
+    }
+    .container8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .books_flexbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100px;
+        flex-direction: column;
+    }
+    /* end */
+    .ending {
+        width: 100%;
+        text-decoration: none;
+    }
+    .container_end {
+        padding-left: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .first_column {
+        gap: 2px;
+    }
+
+    .third_column {
+        color: black;
+        padding-right: 15px;
+        padding-bottom: 62px;
+    }
+    /* our services */
+    .text5 {
+        font-size: 18px;
+    }
+    .text5::before, .text5::after {
+        display: inline-block;
+        height: 2px;
+        bottom: 6px;
+        background-color: black;
+        width: 100px;
+    }
+    .centered5 {
+        font-size: 50px;
+    }
+    .flex-box2 {
+        flex-direction: column;
+        gap: 50px;
+    }
+    /* GPS */
+    .gps {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gps_text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    /* product */
+    .product {
+        padding-top: 160px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

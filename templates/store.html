@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Echostream-Store
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <img src="/static/images/{{ product.img }}" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.price }}</p>
+                    <a href="{{ product.link }}" class="btn btn-primary">View</a>
+                    <a href="{{ product.weblink }}" class="btn btn-primary" target="_blank">Purchase</a>
+                    <a href="javascript:void(0);" onclick="likeProduct('{{ product.id }}', this);">
+                        <img src="/static/images/like.jfif" style="width: 18%; height: auto">
+                    </a>
+                    <span id="likes-{{ product.id }}">{{ product.likes }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    function likeProduct(productId, likeButton) {
+        fetch('/like', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                product_id: productId
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                let likeCountElement = document.getElementById(`likes-${productId}`);
+                likeCountElement.innerText = data.likes;
+                alert(data.message);
+            } else {
+                alert('Error liking product: ' + (data.error || 'Unknown error'));
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error liking product: ' + error.message);
+        });
+    }
+</script>
+{% endblock %}

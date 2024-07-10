@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Echostream-products
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <img src="/static/images/{{ product['img'] }}" class="card-img-top" alt="AM">
+                <div class="card-body">
+                    <h5 class="card-title">name: {{ product['name'] }}</h5>
+                    <p class="card-text">price: {{ product['price'] }}</p>
+                    <a class="btn btn-danger" href="/delete_">delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

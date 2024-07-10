@@ -1,0 +1,55 @@
+{% set active_page = "index" %}
+{% extends "base.html" %}
+
+{% block title %}
+Echosteam
+{% endblock %}
+
+{% block content %}
+
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="/static/images/Store.jpg" class="d-block w-100" height="850px">
+            <div class="carousel-caption d-md-block">
+                <h5 style="color: white;">Music Store</h5>
+                <p style="color: white;">Check out our best albums</p>
+                <button type="button" class="btn btn-light"><a href="store.html">Buy Now!</a></button>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="/static/images/Albums.jpg" class="d-block w-100" height="850px">
+            <div class="carousel-caption d-md-block">
+                <h5 style="color: aliceblue;">Our Albums</h5>
+                <p style="color: aliceblue;">Check out our Albums</p>
+                <button type="button" class="btn btn-light"><a href="Album-AM.html">More Details</a></button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/static/images/musicnews.jpg" class="d-block w-100" height="850px">
+            <div class="carousel-caption d-md-block">
+                <h5 style="color: aliceblue;">Music News</h5>
+                <p style="color: aliceblue;">Check out our latest news</p>
+                <button type="button" class="btn btn-light"><a href="News.html">More Details</a></button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+{% endblock %}

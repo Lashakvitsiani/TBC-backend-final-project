@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Echostream-Users
+{% endblock %}
+
+
+{% block content %}
+<div class="container my-2 py-3 bg-white shadow-lg">
+    <div class="row">
+        {% for User in registered_users %}
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ User['username'] }}</h5>
+                    <h5 class="card-title">{{ User['password'] }}</h5>
+                    <h5 class="card-title">{{ User['email'] }}</h5>
+                    <a class="btn btn-danger" href="/delete_user/{{ User['id'] }}">delete</a>
+                    <a class="btn btn-primary" href="/edit_user/{{ User['id'] }}">edit</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
